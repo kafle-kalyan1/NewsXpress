@@ -16,7 +16,8 @@ const News = (props) => {
 
   const updateNews = async () => {
     console.log(props.country)
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=1a9c95102150430aa720df6fb085468c&page=${page}&pageSize=${props.pageSize}`;
+    apiKey = "API_KEY_HERE"
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${apiKey}&page=${page}&pageSize=${props.pageSize}`;
 
     setLoading(true);
     let data = await fetch(url);
